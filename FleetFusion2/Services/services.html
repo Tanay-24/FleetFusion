@@ -1,0 +1,97 @@
+<?php
+  // PHP code goes here
+  // For example, you can include PHP code to handle form submissions or interact with a database
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services</title>
+  <style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url('2.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .button-container button {
+      border-radius: 4px;
+      background-color: #5ca1e1;
+      border: none;
+      color: #fff;
+      text-align: center;
+      font-size: 32px;
+      padding: 16px;
+      width: 220px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 36px;
+      box-shadow: 0 10px 20px -8px rgba(0, 0, 0, .7);
+      position: relative;
+    }
+
+    .button-container button:after {
+      content: '»';
+      position: absolute;
+      opacity: 0;
+      top: 14px;
+      right: -20px;
+      transition: 0.5s;
+    }
+
+    .button-container button:hover {
+      padding-right: 24px;
+      padding-left: 8px;
+    }
+
+    .button-container button:hover:after {
+      opacity: 1;
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="button-container">
+    <button type="submit" id="railway"> <a href="../Railway/dashboard.html"></a>Railway</button>
+    <button id="btnShip"><a href="">Ship</a></button>
+    <button type="submit" id="btnAirline"><a href="../Airline/airline_login.html"></a>Airline</button>
+    <button type="submit" id="bus"> <a href="../Bus/busdashboard.html"></a>Bus</button>
+    <button id="btnGoods"><a href="">Goods</a></button>
+  </div>
+
+  <script>
+    // JavaScript code goes here
+    // You can include JavaScript code to handle button clicks or perform other client-side tasks
+    document.getElementById("railway").addEventListener("click", function() {
+    window.location.href = "../Railway/dashboard.html";
+});
+
+document.getElementById("btnShip").addEventListener("click", function() {
+    window.location.href = "ship_register.html";
+});
+
+document.getElementById("btnAirline").addEventListener("click", function() {
+    window.location.href = "../Airline/airline_login.html";
+});
+
+document.getElementById("bus").addEventListener("click", function() {
+    window.location.href = "../Bus/busdashboard.html";
+});
+
+document.getElementById("btnGoods").addEventListener("click", function() {
+    window.location.href = "goods_register.html";
+});
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edit Train Details</title>
+<link rel="stylesheet" href="edittrains.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="text">
+        Edit Train Details
+    </div>
+    <form action="update_train.php" method="post"> <!-- Updated action attribute -->
+        <div class="form-row">
+            <div class="input-data">
+                <input type="text" name="train_name" required> <!-- Added name attribute -->
+                <div class="underline"></div>
+                <label for="">Train Name/ID</label>
+            </div>
+            <div class="input-data">
+                <input type="text" name="train_type" required> <!-- Added name attribute -->
+                <div class="underline"></div>
+                <label for="">Train Type</label>
+            </div>
+        </div>
+        <!-- Add other input fields for editing train details -->
+        <div class="form-row">
+            <!-- Example input fields -->
+            <div class="input-data">
+                <input type="text" name="departure_station" required> <!-- Added name attribute -->
+                <div class="underline"></div>
+                <label for="">Departure Station</label>
+            </div>
+            <div class="input-data">
+                <input type="text" name="destination_station" required> <!-- Added name attribute -->
+                <div class="underline"></div>
+                <label for="">Destination Station</label>
+            </div>
+        </div>
+        <div class="form-row submit-btn">
+            <div class="input-data">
+                <div class="inner"></div>
+                <input type="submit" value="Save Changes"><a href="dashboard.html"></a>
+            </div>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
+
+    

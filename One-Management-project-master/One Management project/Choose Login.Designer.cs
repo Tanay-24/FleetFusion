@@ -42,6 +42,8 @@
             // 
             // btnAdmin
             // 
+            this.btnAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAdmin.Font = new System.Drawing.Font("Modern No. 20", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdmin.Location = new System.Drawing.Point(71, 332);
             this.btnAdmin.Name = "btnAdmin";
@@ -53,6 +55,8 @@
             // 
             // btnUser
             // 
+            this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUser.Font = new System.Drawing.Font("Modern No. 20", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUser.Location = new System.Drawing.Point(554, 332);
             this.btnUser.Name = "btnUser";

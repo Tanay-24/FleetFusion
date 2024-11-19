@@ -1,4 +1,5 @@
-﻿using System;
+﻿using One_Management_project.Railway_Folder;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace One_Management_project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Register());
+            Application.Run(new StartScreen());
         }
     }
 }

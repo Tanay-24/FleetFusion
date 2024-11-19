@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add New Train</title>
+<link rel="stylesheet" href="addbus.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="text">
+        Add Bus Detail
+    </div>
+    <form action="addbus.php" method="POST"> <!-- Set action to the PHP script -->
+        <div class="form-row">
+            <div class="input-data">
+                <input type="text" name="busName" required> <!-- Set name attribute -->
+                <div class="underline"></div>
+                <label for="">Bus Nnumber</label>
+            </div>
+            <div class="input-data">
+                <input type="text" name="busType" required> <!-- Set name attribute -->
+                <div class="underline"></div>
+                <label for="">Bus Type</label>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="input-data">
+                <input type="text" name="departureStop" required> <!-- Set name attribute -->
+                <div class="underline"></div>
+                <label for="">Departure Stop</label>
+            </div>
+            <div class="input-data">
+                <input type="text" name="destinationStop" required> <!-- Set name attribute -->
+                <div class="underline"></div>
+                <label for="">Destination Stop</label>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="input-data">
+                <input type="time" name="departureTime" required> <!-- Set name attribute -->
+                <div class="underline"></div>
+                <label for="">Departure Time</label>
+            </div>
+            <div class="input-data">
+                <input type="time" name="arrivalTime" required> <!-- Set name attribute -->
+                <div class="underline"></div>
+                <label for="">Arrival Time</label>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="input-data">
+                <input type="text" name="frequency" required> <!-- Set name attribute -->
+                <div class="underline"></div>
+                <label for="">Frequency</label>
+            </div>
+            <div class="input-data">
+                <input type="number" name="distance" required> <!-- Set name attribute -->
+                <div class="underline"></div>
+                <label for="">Distance (in km)</label>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="input-data textarea">
+                <textarea rows="4" name="route" required></textarea> <!-- Set name attribute -->
+                <br />
+                <div class="underline"></div>
+                <label for="">Route</label>
+                <br />
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="input-data">
+                <input type="number" name="capacity" required> <!-- Set name attribute -->
+                <div class="underline"></div>
+                <label for="">Capacity</label>
+            </div>
+            <div class="input-data">
+                <input type="number" name="ticketPrice" required> <!-- Set name attribute -->
+                <div class="underline"></div>
+                <label for="">Ticket Price</label>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="input-data">
+                <input type="text" name="busStatus" required> <!-- Set name attribute -->
+                <div class="underline"></div>
+                <label for="">Bus Status</label>
+            </div>
+        </div>
+        <div class="form-row submit-btn">
+            <div class="input-data">
+                <div class="inner"></div>
+                <input type="submit" value="Submit">
+            </div>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

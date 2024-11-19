@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train List</title>
+    <link rel="stylesheet" href="showtrains.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Train List</h1>
+        <button id="fetchButton">Fetch Trains</button>
+        <div id="trainList"></div> <!-- Train list will be displayed here -->
+        <a href="dashboard.html">Back</a>
+    </div>
+
+    <script>
+        // JavaScript for handling the fetch button click event
+        document.getElementById("fetchButton").addEventListener("click", function() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        document.getElementById("trainList").innerHTML = xhr.responseText;
+                    } else {
+                        console.error("Error fetching train list: " + xhr.status);
+                    }
+                }
+            };
+            xhr.open("POST", "fetch_trains.php", true);
+            xhr.send();
+        });
+    </script>
+</body>
+</html>

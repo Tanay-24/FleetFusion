@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Screen</title>
+    <style>
+        body {
+        margin: 0;
+        padding: 0;
+        background-image: url('1.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family: Arial, sans-serif;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: rgb(170, 36, 36); /* Change text color to white */
+        }
+
+        .progress-bar {
+            width: 80%; /* Adjust the width as needed */
+            max-width: 300px; /* Set a maximum width */
+            height: 30px;
+            background-color: rgba(240, 240, 240, 0.5); /* Use rgba for semi-transparent background */
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 20px auto; /* Center the progress bar */
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background-color: #4caf50;
+            border-radius: 15px;
+            transition: width 0.5s ease-in-out;
+        }
+
+     /*  h1 {
+            margin-bottom: 1px; Add some margin below the heading 
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FleetFusion Loading...</h1>
+        <div class="progress-bar">
+            <div class="progress-bar-fill" id="progressBarFill"></div>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            var progressBarFill = document.getElementById('progressBarFill');
+            var startpoint = 0;
+            var timer = setInterval(function() {
+                startpoint++;
+                progressBarFill.style.width = startpoint + '%';
+                if (startpoint >= 70) {
+                    clearInterval(timer);
+                    setTimeout(function() {
+                        window.location.href = 'register.html'; // Redirect to choose login page
+                    }, 100); // Delay for 1 second before redirecting
+                }
+            }, 100); // Update progress every 100 milliseconds
+        };
+    </script>
+</body>
+</html>

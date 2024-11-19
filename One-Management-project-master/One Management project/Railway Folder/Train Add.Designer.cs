@@ -46,7 +46,6 @@
             this.cbSource = new System.Windows.Forms.ComboBox();
             this.cbDestination = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.cbNoofdaysrunning = new System.Windows.Forms.ComboBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -56,6 +55,7 @@
             this.cbSourceMinute = new System.Windows.Forms.ComboBox();
             this.cbDestinationHour = new System.Windows.Forms.ComboBox();
             this.cbDestinationMinute = new System.Windows.Forms.ComboBox();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // panel1
@@ -270,33 +270,6 @@
             this.label8.Size = new System.Drawing.Size(171, 25);
             this.label8.TabIndex = 20;
             this.label8.Text = "No.Days Running";
-            // 
-            // cbNoofdaysrunning
-            // 
-            this.cbNoofdaysrunning.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.cbNoofdaysrunning.FormattingEnabled = true;
-            this.cbNoofdaysrunning.Items.AddRange(new object[] {
-            "Sunday",
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday",
-            "Weekend only",
-            "All Days",
-            "",
-            "Monday wednesday Friday",
-            "Monday Tuesday",
-            "Tuesday Thursday saturday",
-            "Monday Wednesday",
-            "Monday Thursday",
-            "Monday Friday"});
-            this.cbNoofdaysrunning.Location = new System.Drawing.Point(326, 437);
-            this.cbNoofdaysrunning.Name = "cbNoofdaysrunning";
-            this.cbNoofdaysrunning.Size = new System.Drawing.Size(231, 32);
-            this.cbNoofdaysrunning.TabIndex = 21;
             // 
             // btnBack
             // 
@@ -561,11 +534,28 @@
             this.cbDestinationMinute.Size = new System.Drawing.Size(110, 32);
             this.cbDestinationMinute.TabIndex = 30;
             // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thrusday",
+            "Friday ",
+            "Saturday",
+            "Sunday"});
+            this.checkedListBox1.Location = new System.Drawing.Point(326, 403);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(150, 94);
+            this.checkedListBox1.TabIndex = 39;
+            // 
             // Add_Trains
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1175, 581);
+            this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.cbDestinationMinute);
             this.Controls.Add(this.cbDestinationHour);
             this.Controls.Add(this.cbSourceMinute);
@@ -575,7 +565,6 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.cbNoofdaysrunning);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cbDestination);
             this.Controls.Add(this.cbSource);
@@ -623,7 +612,6 @@
         private System.Windows.Forms.ComboBox cbSource;
         private System.Windows.Forms.ComboBox cbDestination;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox cbNoofdaysrunning;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
@@ -633,5 +621,6 @@
         private System.Windows.Forms.ComboBox cbSourceMinute;
         private System.Windows.Forms.ComboBox cbDestinationHour;
         private System.Windows.Forms.ComboBox cbDestinationMinute;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
     }
 }

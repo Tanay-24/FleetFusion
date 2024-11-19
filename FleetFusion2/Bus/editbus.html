@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edit Bus Details</title>
+<link rel="stylesheet" href="editbus.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="text">
+        Edit Bus Details
+    </div>
+    <form action="update_bus.php" method="post"> <!-- Updated action attribute -->
+        <div class="form-row">
+            <div class="input-data">
+                <input type="text" name="busName" required> <!-- Added name attribute -->
+                <div class="underline"></div>
+                <label for="">Bus Number</label>
+            </div>
+            <div class="input-data">
+                <input type="text" name="busType" required> <!-- Added name attribute -->
+                <div class="underline"></div>
+                <label for="">Bus Type</label>
+            </div>
+        </div>
+        <!-- Add other input fields for editing train details -->
+        <div class="form-row">
+            <!-- Example input fields -->
+            <div class="input-data">
+                <input type="text" name="departureStop" required> <!-- Added name attribute -->
+                <div class="underline"></div>
+                <label for="">Departure Stop</label>
+            </div>
+            <div class="input-data">
+                <input type="text" name="destinationStop" required> <!-- Added name attribute -->
+                <div class="underline"></div>
+                <label for="">Destination Stop</label>
+            </div>
+        </div>
+        <div class="form-row submit-btn">
+            <div class="input-data">
+                <div class="inner"></div>
+                <input type="submit" value="Save Changes"><a href="dashboard.html"></a>
+            </div>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
+
+    

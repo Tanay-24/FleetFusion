@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Login Form Using HTML/CSS</title>
+</head>
+<body>
+  <!-- Container Start -->
+  <div id="container">
+    <!-- Form Wrap Start -->
+    <div class="form-wrap">
+      <h1>Login</h1>
+      <form id="loginForm" action="login.php" method="POST">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" required>
+        </div>
+        <button type="submit"><a href="../Services/services.html"></a>Login</button>
+        <p class="bottom-text">
+          Don't have an account? <a href="register.html">Sign Up</a>
+        </p>
+      </form>
+    </div>
+    <!-- Form Wrap Close -->
+  </div>
+  <!-- Container Close -->
+</body>
+</html>

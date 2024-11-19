@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Management</title>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="dashboard.html" onclick="loadForm('dashboard.html')">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a href="addtrains.html" class="tab-link active" onclick="openTab(event, 'addtrains.html')">Tab 1</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="edittrains.html" onclick="loadForm('edittrains.html')">Edit Train</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="loadForm('drivers.html')">Drivers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="loadForm('tickets.html')">Tickets</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="loadForm('settings.html')">Settings</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div id="formContainer" class="container">
+      <!-- Form content will be loaded here -->
+    </div>
+    <div id="addtrains" class="tab-content active">
+        <p></p>
+    </div>
+    <script src="homepage.js"></script>
+</body>
+</html>

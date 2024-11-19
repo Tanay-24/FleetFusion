@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,11 +15,11 @@ namespace One_Management_project.Railway_Folder
     public partial class User_RTicket_Book : Form
     {
         MySqlConnection conn = new MySqlConnection("datasource=localhost;port=3306;username=root;password=");
-        
+
         public User_RTicket_Book()
         {
             InitializeComponent();
-            
+
         }
 
         private void User_RTicket_Book_Load(object sender, EventArgs e)
@@ -34,8 +33,6 @@ namespace One_Management_project.Railway_Folder
             cbTrainnameandnumber.DataSource = dt;
             cbTrainnameandnumber.DisplayMember = "TrainNumberAndName";
             conn.Close();
-
-          
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -69,7 +66,7 @@ namespace One_Management_project.Railway_Folder
             else
             {
                 conn.Open();
-                string iquery = "INSERT INTO ptickets.prtickets(`ID`,`PassengerName`,`PassengerAge`,`Gender`,`NoOfSeats`,`Source`,`Destination`,`JourneyDate`,`TicketCost`,`UserMobile`,`TrainNameandNumber`) VALUES (NULL, '" + txtPassengername.Text + "', '" + cbPassenegerage.SelectedItem.ToString() + "', '" + cbGender.SelectedItem.ToString() + "', '" + txtNoofseats.Text + "','" + cbSource.SelectedItem.ToString() + "','" + cbDestination.SelectedItem.ToString() + "', '" + dateTimePicker1.Value.Date.ToString() + "','" + label12.Text + "','"+ txtUsermobile.Text +"','"+ cbTrainnameandnumber.SelectedItem.ToString() + "')";
+                string iquery = "INSERT INTO ptickets.prtickets(`ID`,`PassengerName`,`PassengerAge`,`Gender`,`NoOfSeats`,`Source`,`Destination`,`JourneyDate`,`TicketCost`,`UserMobile`,`TrainNameandNumber`) VALUES (NULL, '" + txtPassengername.Text + "', '" + cbPassenegerage.SelectedItem.ToString() + "', '" + cbGender.SelectedItem.ToString() + "', '" + txtNoofseats.Text + "','" + cbSource.SelectedItem.ToString() + "','" + cbDestination.SelectedItem.ToString() + "', '" + dateTimePicker1.Value.Date.ToString() + "','" + label12.Text + "','" + txtUsermobile.Text + "','" + cbTrainnameandnumber.SelectedItem.ToString() + "')";
                 MySqlCommand commandDatabase = new MySqlCommand(iquery, conn);
                 commandDatabase.CommandTimeout = 180;
                 MySqlDataReader myReader = commandDatabase.ExecuteReader();
@@ -79,13 +76,11 @@ namespace One_Management_project.Railway_Folder
                 //PrintDialog printDialog = new PrintDialog();
                 //printDialog.ShowDialog();
             }
-
         }
-
 
         private void cbTrainnameandnumber_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -95,7 +90,6 @@ namespace One_Management_project.Railway_Folder
             user_Railway.ShowDialog();
         }
 
-
         private void cbSource_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -103,12 +97,13 @@ namespace One_Management_project.Railway_Folder
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            e.Graphics.DrawImage(bitmap,-10,0);   
+            e.Graphics.DrawImage(bitmap, -10, 0);
         }
+
         Bitmap bitmap;
+
         private void btnPrint_Click(object sender, EventArgs e)
         {
-
             Graphics graphics = this.CreateGraphics();
             bitmap = new Bitmap(this.Size.Width, this.Size.Height, graphics);
             Graphics g = Graphics.FromImage(bitmap);
